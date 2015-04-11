@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="test/html; charset=UTF-8" />
+
+<title> Hochzeit von Bernhard und Isabell </title>
+
+<style type="text/css">
+
+body{
+  font-family:"Comic Sans MS",cursive, sans-serif;
+  margin-top: 0.5cm;
+}
+
+#map-canvas{
+    width: 400px;
+    height: 300px;
+    background-color: #CCC;
+}
+
+</style>
+</head>
+
+
+
+<body bgcolor="FFFFFF" text="9F0517">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+
+<br>
+<br>
+<br>
+
+<!-- <hr width="80%"> -->
+<div align="center"> &#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049; </div>
+
+
+</br> 
+
+<div style = "padding-left:12%;padding-right:12%" align="center">
+<table>
+<col width="30%" />
+<col width="10%" />
+<col width="25%" />
+<col width="10%" />
+<col width="25%" />
+	<tr>
+	<td>  <h1> Hochzeit von <br> Bernhard und Isabell </h1> 
+        <br>
+		<img src="b+i3.JPG" width=300 />
+		</br>
+	</td>
+
+    <td> </td>
+
+	<td> 
+
+	    Am 3. Oktober 2015 um 13:30 Uhr findet die Hochzeitsmesse in der 
+        Wallfahrtskirche Fährbrück und anschießend der Sektempfang statt.
+        <br>
+        <br>
+        
+    </td>
+
+    <td> </td>
+
+    <td>
+		    <a href="google_form_kurz.html"><img src="infos.jpg" width=100 /><br><font color="9F0517">Anmeldung</font></a>
+	</td>
+	</tr>
+</table>
+</div>
+
+</br><br>
+
+<div align="center">
+<table>
+<col width="10%" />
+<col width="20%" />
+<col width="10%" />
+<col width="20%" />
+<col width="10%" />
+<tr>  <td>&#10049;</td> <td></td> <td>&#10049;</td> <td></td> <td>&#10049;</td> </tr>
+</table>
+</table>
+</table>
+</div>
+
+</br><br>
+
+<div style = "padding-left:12%;padding-right:12%" align="center">
+<table>
+<col width="25%" />
+<col width="7%" />
+<col width="36%" />
+<col width="7%" />
+<col width="25%" />
+    <tr>
+        <td> 
+            <img src="faehrbrueck.jpg" width=300 />
+        </td>
+        <td></td>
+        <td>
+            Wallfahrtskirche Fährbrück <br>
+            Fährbrück 2 <br>
+            97262 Hausen bei Würzburg
+        </td>
+        <td></td>
+        <td>
+            <div id="map-canvas"></div>
+        </td>
+    </tr>
+</table>
+
+
+</br><br>
+
+<div align="center">
+<table>
+<col width="10%" />
+<col width="20%" />
+<col width="10%" />
+<col width="20%" />
+<col width="10%" />
+<tr>  <td>&#10049;</td> <td></td> <td>&#10049;</td> <td></td> <td>&#10049;</td> </tr>
+</table>
+</table>
+</table>
+</div>
+
+</br><br>
+
+<div align="center">
+Wenn Du Fragen oder Anmerkungen hast, melde Dich bitte bei grafisab@gmail.com
+</div>
+
+<br><br>
+
+<!-- <hr width="80%"> -->
+<div align="center"> &#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049;&#10049; </div>
+
+<br> <br> <br> <br>
+
+</body>
+</html>
+
+<script>
+var directionsDisplay,
+    directionsService,
+    map;
+
+function initialize() {
+  var directionsService = new google.maps.DirectionsService();
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var faehrbrueck = new google.maps.LatLng(49.918441, 10.044556);
+  var mapOptions = { zoom:13, mapTypeId: google.maps.MapTypeId.ROADMAP, center: faehrbrueck }
+  map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+  
+  var marker = new google.maps.Marker({
+    position: faehrbrueck,
+    map: map });
+  directionsDisplay.setMap(map);
+}
+</script>
